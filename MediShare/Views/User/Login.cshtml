@@ -1,0 +1,49 @@
+﻿@model MediShare.Models.Login
+
+<section class="h-100 h-custom" style="background-image: url(https://img.freepik.com/free-photo/abstract-luxury-gradient-blue-background-smooth-dark-blue-with-black-vignette-studio-banner_1258-63452.jpg?w=1380&t=st=1699464189~exp=1699464789~hmac=e27b070052fc1524a6028eea8f9c1df53d7dcdfc59e8c5df913554a0dab8f60c); background-size: cover;">
+    <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-lg-8 col-xl-6">
+                <div class="card rounded-3">
+                    <div class="card-body p-4 p-md-5">
+                        <h3 class="mb-4 pb-2 pb-md-0 mb-md-5 px-md-2">Login</h3>
+                        <ul class="nav nav-pills nav-justified mb-3" id="ex1" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <a class="nav-link active" id="tab-login" data-mdb-toggle="pill" href="http://localhost:5044/User/Login" role="tab"
+                                   aria-controls="pills-login" aria-selected="true">Login</a>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <a class="nav-link" id="tab-register" data-mdb-toggle="pill" href="http://localhost:5044/User/Create" role="tab"
+                                   aria-controls="pills-register" aria-selected="false">Register</a>
+                            </li>
+                        </ul>
+                        <form asp-action="Login">
+                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                            <div class="form-group">
+                                <label asp-for="Username" class="control-label">Email</label>
+                                <input asp-for="Username" class="form-control" />
+                                <span asp-validation-for="Username" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Password" class="control-label"></label>
+                                <input type="password" asp-for="Password" class="form-control" />
+                                <span asp-validation-for="Password" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <span class="text-warning">@ViewBag.ErrorMsg</span>
+                            </div>
+                            <br />
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-primary btn-block mb-4">Sign in</button>
+                                <span ></span>
+                            </div>
+                            <div class="text-center">
+                                <p>Not a member? <a href="http://localhost:5044/User/Create">Register</a></p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

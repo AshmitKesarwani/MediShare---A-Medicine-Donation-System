@@ -1,0 +1,47 @@
+﻿@model MediShare.Models.Claimer
+
+@{
+    ViewData["Title"] = "Claim";
+}
+<section class="h-100 h-custom" style="background-image: url(https://img.freepik.com/free-photo/copy-space-stethoscope-pills_23-2148550954.jpg?w=1380&t=st=1699599624~exp=1699600224~hmac=e49bc17d9adef6c7653fff580b7240bd8d5a1f48669939360ab68086bcbf169b); background-size: cover;">
+    <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-lg-8 col-xl-6">
+                <div class="card rounded-3">
+                    <div class="card-body p-4 p-md-5">
+                        <h4 class="mb-4 display-8 text-center">Claim Medicine</h4>
+                        <hr class="w-50 mx-auto mb-5 mb-xl-9 border-dark-subtle">
+                        <form asp-action="Claim">
+                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                            <div class="form-group border">
+                                <label asp-for="MedicineId" class="control-label">Medicine Name</label>
+                                <select asp-items="@ViewBag.Items as List<SelectListItem>" asp-for="MedicineId"></select>
+                                <span asp-validation-for="MedicineId" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Quantity" class="control-label"></label>
+                                <input asp-for="Quantity" class="form-control" />
+                                <span asp-validation-for="Quantity" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Purpose" class="control-label"></label>
+                                <input asp-for="Purpose" class="form-control" />
+                                <span asp-validation-for="Purpose" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="ShippingAddress" class="control-label"></label>
+                                <input asp-for="ShippingAddress" class="form-control" />
+                                <span asp-validation-for="ShippingAddress" class="text-danger"></span>
+                            </div>
+                            <br />
+                            <div class="form-group">
+                                <input type="submit" value="Claim" class="btn btn-primary" />
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

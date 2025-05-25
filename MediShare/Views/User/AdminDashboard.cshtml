@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewData["Title"] = "AdminDashboard";
+}
+
+<div class="d-flex" id="wrapper">
+    <!-- Sidebar-->
+    <div class="border-end" id="sidebar-wrapper" style="width:350px">
+        <div class="list-group list-group-flush">
+            <a class="list-group-item list-group-item-action list-group-item-light p-3" href="http://localhost:5044/Medicine/GetAllMedicine">Medicine Repository</a>
+            <a class="list-group-item list-group-item-action list-group-item-light p-3" href="http://localhost:5044/User/Index">Manage Users</a>
+            <a class="list-group-item list-group-item-action list-group-item-light p-3" href="http://localhost:5044/Donor/GetAllDonor">Donors</a>
+            <a class="list-group-item list-group-item-action list-group-item-light p-3" href="http://localhost:5044/BloodDonator/GetAllBloodDonor">Blood Donors</a>
+        </div>
+    </div>
+    <!-- Page content wrapper-->
+    <div id="page-content-wrapper">
+        <!-- Top navigation-->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+            <div class="container-fluid">
+                <h1>Admin Dashboard</h1>
+                <a asp-action="Logout" asp-controller="User" class="btn btn-secondary">Logout</a>
+            </div>
+        </nav>
+        <!-- Page content-->
+        <div class="container-fluid">
+            <img src="https://img.freepik.com/free-photo/view-desk-items-frame-with-copy-space_23-2148604850.jpg?w=1060&t=st=1699562760~exp=1699563360~hmac=8e2fbff072c6a6beaadcd1ae82a95b623a3c66e0b4b397c3a3fb8c138f7354bd" style="align-content:center" height="400px" width="900px" />
+        </div>
+    </div>
+</div>

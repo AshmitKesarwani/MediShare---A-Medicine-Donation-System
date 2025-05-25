@@ -1,0 +1,80 @@
+﻿@model IEnumerable<MediShare.Models.BloodDonor>
+
+@{
+    ViewData["Title"] = "GetAllBloodDonor";
+}
+
+<h1>Blood Donor Repository</h1>
+<hr />
+<table class="table table-hover table-bordered table-responsive table-striped" style="background-image: url(https://img.freepik.com/free-vector/white-abstract-background-design_23-2148825582.jpg?w=900&t=st=1699554048~exp=1699554648~hmac=d111b4dbc6d4b6b633f545072140a11d86d0f3116e9a88e7c7dd26bbb212a47a)">
+    <thead>
+        <tr class="table-info">
+            <th>
+                @Html.DisplayNameFor(model => model.DonorName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Age)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Gender)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BloodGroup)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LastDonatedDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ContactNo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Address)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.City)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PinCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MedicalHistory)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.DonorName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Age)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Gender)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BloodGroup)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastDonatedDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ContactNo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Address)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.City)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PinCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MedicalHistory)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,87 @@
+﻿@model MediShare.Models.BloodDonor
+
+@{
+    ViewData["Title"] = "AddBloodDonor";
+}
+<section class="h-100 h-custom" style="background-image: url(https://i.pinimg.com/736x/96/84/ba/9684bad1d2547790134f7e9a9add5b68.jpg);background-size: cover;">
+    <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-lg-8 col-xl-6">
+                <div class="card rounded-3">
+                    <img src="https://www.careinsurance.com/upload_master/media/posts/June2020/IQKrrYI3nqo0i9PNqO7W.jpg"
+                         class="w-100" style="border-top-left-radius: .3rem; border-top-right-radius: .3rem;"
+                         alt="Sample photo">
+                    <div class="card-body p-4 p-md-5">
+                        <h3 class="mb-4 pb-2 pb-md-0 mb-md-5 px-md-2">Register for Donation </h3>
+                        <form asp-action="AddBloodDonor">
+                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                            <div class="form-group">
+                                <label asp-for="DonorName" class="control-label"></label>
+                                <input asp-for="DonorName" class="form-control" />
+                                <span asp-validation-for="DonorName" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Age" class="control-label"></label>
+                                <input asp-for="Age" class="form-control" />
+                                <span asp-validation-for="Age" class="text-danger"></span>
+                            </div>
+                            <label asp-for="Gender" class="control-label"></label>
+                            <div class="form-group border">
+                              
+                                <input type="radio" asp-for="Gender" value="male"> Male 
+                                <input type="radio" asp-for="Gender" value="female"> Female
+                                <span asp-validation-for="Gender" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="BloodGroup" class="control-label"></label>
+                                <input asp-for="BloodGroup" class="form-control" />
+                                <span asp-validation-for="BloodGroup" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="LastDonatedDate" class="control-label"></label>
+                                <input asp-for="LastDonatedDate" class="form-control" />
+                                <span asp-validation-for="LastDonatedDate" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="ContactNo" class="control-label"></label>
+                                <input asp-for="ContactNo" class="form-control" />
+                                <span asp-validation-for="ContactNo" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Address" class="control-label"></label>
+                                <input asp-for="Address" class="form-control" />
+                                <span asp-validation-for="Address" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="City" class="control-label"></label>
+                                <input asp-for="City" class="form-control" />
+                                <span asp-validation-for="City" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="PinCode" class="control-label"></label>
+                                <input asp-for="PinCode" class="form-control" />
+                                <span asp-validation-for="PinCode" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="MedicalHistory" class="control-label"></label>
+                                <input asp-for="MedicalHistory" class="form-control" />
+                                <span asp-validation-for="MedicalHistory" class="text-danger"></span>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" required>
+                                <label class="form-check-label" for="flexCheckDefault">
+                                   I consent to donate blood anytime when required
+                                </label>
+                            </div>
+                            <br />
+                            <div class="form-group">
+                                <input type="submit" value="Register" class="btn btn-primary" />
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

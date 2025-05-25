@@ -1,0 +1,60 @@
+﻿@model IEnumerable<MediShare.Models.Medicine>
+
+<h1>
+    Medicine Repository
+</h1>
+<hr />
+<table class="table table-hover table-bordered table-responsive table-striped" style="background-image: url(https://img.freepik.com/free-vector/white-abstract-background-design_23-2148825582.jpg?w=900&t=st=1699554048~exp=1699554648~hmac=d111b4dbc6d4b6b633f545072140a11d86d0f3116e9a88e7c7dd26bbb212a47a)">
+    <thead>
+        <tr class="table-info">
+            <th>
+                @Html.DisplayNameFor(model => model.MedicineId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MedicineName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MedicineDescription)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Quantity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CategoryId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Expiry_Date)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.MedicineId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MedicineName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MedicineDescription)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Quantity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CategoryId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Expiry_Date)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-controller="Medicine" asp-route-MedicineId="@item.MedicineId" class="btn btn-secondary">Edit</a>
+                <a asp-action="DeleteMedicine" asp-route-MedicineId="@item.MedicineId" asp-controller="Medicine" class="btn btn-secondary">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+<a href="http://localhost:5044/Medicine/AddMedicine" class="btn btn-info">Add Medicines</a>

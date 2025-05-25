@@ -1,0 +1,64 @@
+﻿@model MediShare.Models.User
+
+@{
+    ViewData["Title"] = "Create";
+}
+<section class="h-100 h-custom" style="background-image: url(https://img.freepik.com/free-photo/abstract-luxury-gradient-blue-background-smooth-dark-blue-with-black-vignette-studio-banner_1258-63452.jpg?w=1380&t=st=1699464189~exp=1699464789~hmac=e27b070052fc1524a6028eea8f9c1df53d7dcdfc59e8c5df913554a0dab8f60c);background-size: cover;">
+    <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-lg-8 col-xl-6">
+                <div class="card rounded-3">
+                    <img src="https://www.contactspace.com/wp-content/uploads/making-a-donation-min-scaled.jpeg"
+                         class="w-100" style="border-top-left-radius: .3rem; border-top-right-radius: .3rem;"
+                         alt="Sample photo">
+                    <div class="card-body p-4 p-md-5">
+                        <h3 class="mb-4 pb-2 pb-md-0 mb-md-5 px-md-2">Registration Info</h3>
+                        <form asp-action="Create">
+                            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                            <div class="form-group">
+                                <label asp-for="FirstName" class="control-label"></label>
+                                <input asp-for="FirstName" class="form-control" />
+                                <span asp-validation-for="FirstName" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="LastName" class="control-label"></label>
+                                <input asp-for="LastName" class="form-control" />
+                                <span asp-validation-for="LastName" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Email" class="control-label"></label>
+                                <input asp-for="Email" class="form-control" />
+                                <span asp-validation-for="Email" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Mobile" class="control-label"></label>
+                                <input asp-for="Mobile" class="form-control" />
+                                <span asp-validation-for="Mobile" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Country" class="control-label"></label>
+                                <input asp-for="Country" class="form-control" />
+                                <span asp-validation-for="Country" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Password" class="control-label"></label>
+                                <input asp-for="Password" class="form-control" />
+                                <span asp-validation-for="Password" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="ConfirmPassword" class="control-label"></label>
+                                <input asp-for="ConfirmPassword" class="form-control" />
+                                <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                            </div>
+                            <br />
+                            <div class="form-group">
+                                <input type="submit" value="Create" class="btn btn-primary" />
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
